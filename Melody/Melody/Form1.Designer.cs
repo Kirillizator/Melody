@@ -29,54 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
-            this.Play = new System.Windows.Forms.Button();
-            this.Properties = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnProp = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Play
+            // btnPlay
             // 
-            this.Play.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Play.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Play.Location = new System.Drawing.Point(81, 45);
-            this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(448, 105);
-            this.Play.TabIndex = 1;
-            this.Play.Text = "Игра";
-            this.Play.UseVisualStyleBackColor = false;
+            this.btnPlay.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPlay.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPlay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPlay.Location = new System.Drawing.Point(81, 45);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(448, 105);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Игра";
+            this.btnPlay.UseVisualStyleBackColor = false;
             // 
-            // Properties
+            // btnProp
             // 
-            this.Properties.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Properties.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Properties.Location = new System.Drawing.Point(81, 213);
-            this.Properties.Name = "Properties";
-            this.Properties.Size = new System.Drawing.Size(448, 105);
-            this.Properties.TabIndex = 2;
-            this.Properties.Text = "Настройка";
-            this.Properties.UseVisualStyleBackColor = false;
+            this.btnProp.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnProp.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnProp.Location = new System.Drawing.Point(81, 213);
+            this.btnProp.Name = "btnProp";
+            this.btnProp.Size = new System.Drawing.Size(448, 105);
+            this.btnProp.TabIndex = 2;
+            this.btnProp.Text = "Настройка";
+            this.btnProp.UseVisualStyleBackColor = false;
+            this.btnProp.Click += new System.EventHandler(this.btnProp_Click);
             // 
-            // Exit
+            // btnExit
             // 
-            this.Exit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Exit.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.Location = new System.Drawing.Point(81, 372);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(448, 105);
-            this.Exit.TabIndex = 3;
-            this.Exit.Text = "Выход";
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            this.btnExit.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExit.Location = new System.Drawing.Point(81, 372);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(448, 105);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Melody.Properties.Resources.Bankoboev_Ru_krasivyi_fon;
-            this.ClientSize = new System.Drawing.Size(614, 528);
-            this.Controls.Add(this.Exit);
-            this.Controls.Add(this.Properties);
-            this.Controls.Add(this.Play);
+            this.ClientSize = new System.Drawing.Size(584, 562);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnProp);
+            this.Controls.Add(this.btnPlay);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
@@ -86,9 +90,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button Play;
-        private System.Windows.Forms.Button Properties;
-        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnProp;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
