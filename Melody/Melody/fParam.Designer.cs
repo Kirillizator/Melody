@@ -31,7 +31,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnBrsFold = new System.Windows.Forms.Button();
             this.btnCkrList = new System.Windows.Forms.Button();
-            this.chlboxInclud = new System.Windows.Forms.CheckBox();
+            this.chkboxInclud = new System.Windows.Forms.CheckBox();
             this.btnCans = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -63,17 +63,18 @@
             this.btnCkrList.TabIndex = 2;
             this.btnCkrList.Text = "Очистить список";
             this.btnCkrList.UseVisualStyleBackColor = true;
+            this.btnCkrList.Click += new System.EventHandler(this.btnCkrList_Click);
             // 
-            // chlboxInclud
+            // chkboxInclud
             // 
-            this.chlboxInclud.AutoSize = true;
-            this.chlboxInclud.Location = new System.Drawing.Point(237, 425);
-            this.chlboxInclud.Name = "chlboxInclud";
-            this.chlboxInclud.Size = new System.Drawing.Size(118, 17);
-            this.chlboxInclud.TabIndex = 3;
-            this.chlboxInclud.Text = "Вложенные папки";
-            this.chlboxInclud.UseVisualStyleBackColor = true;
-            this.chlboxInclud.CheckedChanged += new System.EventHandler(this.chlboxInclud_CheckedChanged);
+            this.chkboxInclud.AutoSize = true;
+            this.chkboxInclud.Location = new System.Drawing.Point(233, 473);
+            this.chkboxInclud.Name = "chkboxInclud";
+            this.chkboxInclud.Size = new System.Drawing.Size(118, 17);
+            this.chkboxInclud.TabIndex = 3;
+            this.chkboxInclud.Text = "Вложенные папки";
+            this.chkboxInclud.UseVisualStyleBackColor = true;
+            this.chkboxInclud.CheckedChanged += new System.EventHandler(this.chlboxInclud_CheckedChanged);
             // 
             // btnCans
             // 
@@ -102,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(584, 562);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCans);
-            this.Controls.Add(this.chlboxInclud);
+            this.Controls.Add(this.chkboxInclud);
             this.Controls.Add(this.btnCkrList);
             this.Controls.Add(this.btnBrsFold);
             this.Controls.Add(this.listBox1);
@@ -119,7 +120,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnBrsFold;
         private System.Windows.Forms.Button btnCkrList;
-        private System.Windows.Forms.CheckBox chlboxInclud;
+        private System.Windows.Forms.CheckBox chkboxInclud;
         private System.Windows.Forms.Button btnCans;
         private System.Windows.Forms.Button btnOK;
     }

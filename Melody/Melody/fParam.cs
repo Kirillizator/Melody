@@ -43,10 +43,18 @@ namespace Melody
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                string[] music_list = System.IO.Directory.GetFiles(fbd.SelectedPath, "*.mp3", chlboxInclud.Checked?System.IO.SearchOption.AllDirectories:System.IO.SearchOption.TopDirectoryOnly);
+                string[] music_list = Directory.GetFiles(fbd.SelectedPath, "*.mp3", chkboxInclud.Checked?SearchOption.AllDirectories:SearchOption.TopDirectoryOnly);
                 listBox1.Items.Clear();
                 listBox1.Items.AddRange(music_list);
+                Victorina.list.Clear();
+                Victorina.list.AddRange(music_list);
+
             }
+        }
+
+        private void btnCkrList_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
         }
     }
 }
