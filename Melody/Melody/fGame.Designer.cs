@@ -64,6 +64,8 @@
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.WMP);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(600, 600);
+            this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "fGame";
             this.Text = "Игра";
             ((System.ComponentModel.ISupportInitialize)(this.WMP)).EndInit();

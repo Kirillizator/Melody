@@ -12,6 +12,7 @@ namespace Melody
 {
     public partial class fGame : Form
     {
+
         public fGame()
         {
             InitializeComponent();
@@ -19,7 +20,8 @@ namespace Melody
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            WMP.URL = Victorina.list[1];
+            // Random rdm = new Random();
+            WMP.URL = Victorina.list[5];
         }
     }
 }

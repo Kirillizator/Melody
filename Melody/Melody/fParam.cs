@@ -20,18 +20,33 @@ namespace Melody
 
         private void fParam_Load(object sender, EventArgs e)
         {
-
+            Set();
+            listBox1.Items.Clear();
+            listBox1.Items.AddRange(Victorina.list.ToArray());
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            Victorina.allDirectories = cbAllDir.Checked;
+            Victorina.gameDuration = Convert.ToInt32(cbGameDuration.Text);
+            Victorina.musicDuration = Convert.ToInt32(cbMusicDuration.Text);
+            Victorina.randomStart = cbRandomStart.Checked;
             Victorina.WriteParam();
             this.Hide();
         }
 
         private void btnCans_Click(object sender, EventArgs e)
         {
+         
             this.Hide();
+        }
+
+        void Set()
+        {
+            cbAllDir.Checked = Victorina.allDirectories;
+            cbGameDuration.Text = Victorina.gameDuration.ToString();
+            cbMusicDuration.Text = Victorina.musicDuration.ToString();
+            cbRandomStart.Checked = Victorina.randomStart;
         }
 
         private void chlboxInclud_CheckedChanged(object sender, EventArgs e)
@@ -44,7 +59,8 @@ namespace Melody
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                string[] music_list = Directory.GetFiles(fbd.SelectedPath, "*.mp3", chkboxInclud.Checked?SearchOption.AllDirectories:SearchOption.TopDirectoryOnly);
+                string[] music_list = Directory.GetFiles(fbd.SelectedPath, "*.mp3", cbAllDir.Checked?SearchOption.AllDirectories:SearchOption.TopDirectoryOnly);
+                Victorina.lastFolder = fbd.SelectedPath;
                 listBox1.Items.Clear();
                 listBox1.Items.AddRange(music_list);
                 Victorina.list.Clear();
